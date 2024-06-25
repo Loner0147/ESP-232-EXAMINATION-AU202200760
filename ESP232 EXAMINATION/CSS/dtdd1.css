@@ -1,0 +1,79 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(../IMG/Father.png);
+  padding: 20px;
+}
+header {
+  background-color: black;
+  color: #ece0e0;
+  text-align: center;
+  padding: 30px 0;
+}
+
+header h1 {
+  font-size: 18px;
+  margin: 0;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.artwork {
+  position: relative;
+  overflow: hidden;
+}
+
+.artwork img {
+  max-width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.artwork:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artwork:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Lightbox adjustments */
+.lb-data {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+}
